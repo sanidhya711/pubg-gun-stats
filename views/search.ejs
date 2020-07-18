@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+       <title>search</title>
+        
+        <link rel="stylesheet" href="css/styles.css"> 
+    </head>
+    <body>
+      
+        <div class="container">
+            <div class="row">
+    
+    
+        <% for(var counter=0; counter < searchedGuns.length; counter++){ %>
+             
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <a href="guns/<%= searchedGuns[counter] %>">
+              <img src="/guns/<%= searchedGuns[counter] %>.png" class="no-background" />
+            </a>
+          </div>
+        
+        <% } %>
+    
+          </div>
+          </div>
+
+    </body>
+</html>

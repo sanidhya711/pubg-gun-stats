@@ -1,0 +1,22 @@
+body{
+  overflow-x: hidden;
+  margin: 0;
+  background-image: url("/background-image/background-image.jpg");
+}
+
+.gun{
+    height: 60%;
+}
+.gun:hover{
+    height: 65%;
+}
+
+.container{
+    margin: 0%;
+    margin-top: 10vh;
+    max-width:10000px ;
+}
+body {
+    font-family: "Lato", sans-serif;
+  }
+

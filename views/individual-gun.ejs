@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <head>
+       <title><%= gun.name %></title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+      <h1><%= gun.name %></h1>
+       <img class="no-background" src="/guns/<%= gun.ammo %>/<%= gun.name %>.png" alt="">
+       <ul> 
+<li>type:<%= gun.type %></li>
+<li>ammo</li>
+       </ul>
+
+      <a href="/compare/<%= gun.name %>">
+         <button>
+            compare
+             </button>
+      </a>
+
+    </body>
+</html>

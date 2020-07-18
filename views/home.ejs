@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+      <title>pubg guns</title>
+
+
+        <!-- Include Twitter Bootstrap and jQuery: -->
+        <link rel="stylesheet" href="css/css/bootstrap.min.css" type="text/css"/>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="css/js/bootstrap.min.js"></script>
+
+        <!-- my css -->
+        <link rel="stylesheet" href="css/styles.css"> 
+
+    </head>
+    <body>
+
+      <%- include("navbar"); -%>
+      
+      <div class="container">
+        <div class="row">
+
+
+    <% for(var counter=0; counter < gunNames.length; counter++){ %>
+         
+      <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+        <a href="guns/<%= gunNames[counter] %>">
+          <img src="/guns/<%= gunNames[counter] %>.png" class="gun" />
+        </a>
+      </div>
+    
+    <% } %>
+
+      </div>
+      </div>
+<!-- --------------my js------------- -->
+<script src="/css/home.js"></script>
+    </body>
+</html>

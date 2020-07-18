@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+    <title>Tables</title>
+    <link rel="stylesheet" href="css/css/bootstrap.min.css" type="text/css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="css/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/tables.css">
+    </head>
+    <body>
+
+
+        <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">name</th>
+                <th scope="col">Damage</th>
+                <th scope="col">Reload Duration</th>
+                <th scope="col">Range</th>
+                <th scope="col">Rate Of Fire</th>
+                <th scope="col">Maps</th>
+                <th scope="col">type</th>
+                <th scope="col">ammo</th>
+              </tr>
+            </thead>
+            <tbody>
+
+<% for(gun in gunInfo) {%>
+              <tr>
+                <th scope="row"><%= gunInfo[gun].name %></th>
+                <td><%= gunInfo[gun].damage %></td>
+                <td><%= gunInfo[gun].reloadDuration %></td>
+                <td><%= gunInfo[gun].range %></td>
+                <td><%= gunInfo[gun].rateOfFire %></td>
+                <td><%= gunInfo[gun].map %></td>
+                <td><%= gunInfo[gun].type %></td>
+                <td><%= gunInfo[gun].ammo %></td>
+              </tr>
+<% } %>
+
+            </tbody>
+          </table>
+
+
+    </body>
+</html>

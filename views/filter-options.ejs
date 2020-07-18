@@ -1,0 +1,135 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <form class="form" action="/" method="POST">
+
+    <div class="form-group">
+            <label>Map</label>
+            <select name="map" class="form-control">
+              <option value="erangle">All</option>
+              <option value="erangle">Erangle</option>
+              <option value="shanok">Shanok exclusive</option>
+              <option value="vikendi">Vikendi exclusive</option>
+              <option value="miramar">Miramar exclusive</option>
+            </select>
+          </div>
+          
+          
+          <div class="form-group">
+            <label>Ammo</label>
+            <select name="ammo" class="form-control">
+              <option value="">All</option>
+              <option>7.62</option>
+              <option>5.56</option>
+              <option>.45acp</option>
+              <option>12 gauge</option>
+              <option>.45acp</option>
+              <option>bolt</option>
+            </select>
+          </div>
+         
+         
+          <div class="form-group">
+            <label>type</label>
+            <select name="type" class="form-control">
+              <option value="">All</option>
+              <option>assault-rifle(AR)</option>
+              <option>shotgun(SG)</option>
+              <option>sniper-rifle(SR)</option>
+              <option>submachine-gun(SMG)</option>
+              <option>designated-marksman-rifle(DMR)</option>
+              <option>pistol</option>
+              <option>crossbow</option>
+            </select>
+          </div>
+          
+         
+          <div class="form-group">
+            <label>firing mode</label>
+            <select name="firing_mode" class="form-control">
+              <option value="">All</option>
+              <option>full auto</option>
+              <option>burst</option>
+              <option>single</option>
+            </select>
+          </div>
+         
+          
+          <div class="form-group">
+            <label>sort by</label>
+            <select name="sort_by" class="form-control">
+              <option value="">none</option>
+              <option value="damage">Damage</option>
+              <option value="reload-duration">Reload Duration</option>
+              <option value="rate-of-fire">Rate Of Fire</option>
+              <option value="range">Range</option>
+              <option value="bullet-Speed">Bullet Speed</option>
+              <option value="body-hit-impact" >Body Hit Impact</option>
+            </select>
+          </div>
+        
+         
+          <div class="form-group">
+            <label>from</label>
+            <select name="sort_from" class="form-control">
+              <option value="">High to Low</option>
+              <option>Low to High</option>
+            </select>
+          </div>
+    
+    
+    
+    
+          <button class="btn btn-primary" type="submit">Apply</button>
+    
+        
+        </form>
+</div>
+
+<div class="filter filters" id="<%= showClearFilter %>">
+<span class="nav_opener" onclick="openNav()"><img src="https://img.icons8.com/dusk/55/000000/filter.png"/><br/> Filter</span>
+</div>
+
+<form action="/clearfilters" method="POST">
+  <div class="filter <%= showClearFilter %>">
+    <button class="clear_filter_button" type="submit">
+    <span class="nav_opener"><img src="https://img.icons8.com/dusk/64/000000/clear-filters.png"/><br/>Clear Filters</span>
+    </button>
+   </div>
+</form>
+
+
+
+
+<script>
+
+function openNav() {
+  var x = window.matchMedia("(max-width: 750px)");
+  if (x.matches){
+    document.getElementById("mySidenav").style.width = "100vw";
+  }else{
+    document.getElementById("mySidenav").style.width = "300px";
+  }
+
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+document.getElementsByClassName("clear_filter").style.display="absolute";
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+     

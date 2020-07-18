@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+  <title>compare <%= mainGun %></title>
+    </head>
+    <body>
+     
+    <h1><%= mainGun %></h1>
+
+    <ul>
+      <% for(gun in gunInfo) {%>
+        <% if(gun!==mainGun) {%>
+          <li>
+            <input onclick="clicked(this)" type="radio" class="input" id="<%= gunInfo[gun].name %>">
+            <%= gunInfo[gun].name %>
+          </li>
+        <% } %>
+        <% } %>
+    </ul>
+   
+  
+  <script src="/css/compare.js"></script>
+  </body>
+</html>
