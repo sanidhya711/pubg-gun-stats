@@ -104,11 +104,11 @@
 <script>
 
 function openNav() {
-  var x = window.matchMedia("(max-height: 600px)");
+  var x = window.matchMedia("(min-width: 650px)");
   if (x.matches){
-    document.getElementById("mySidenav").style.width = "1000px";
+    document.getElementById("mySidenav").style.width = "300px";
   }else{
-    document.getElementById("mySidenav").style.width = "1000px";
+    document.getElementById("mySidenav").style.width = "100vw";
   }
 
 }
